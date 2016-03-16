@@ -1,0 +1,170 @@
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/wallpaperblackconcreteshort"
+        tools:context="comapps.kelseyhaircutholliday.app.MainActivity"
+        android:orientation="vertical">
+
+        <TableRow android:id="@+id/row0" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <TextView android:id="@+id/textView1" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="@string/dayssince2"
+                android:textColor="@color/Ivory" android:textSize="22sp"
+                android:textStyle="bold|italic"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="start"
+           />
+
+
+        </TableRow>
+
+        <TableRow android:id="@+id/row0b" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+            <TextView android:id="@+id/dateDisplay"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textColor="@color/Ivory" android:textSize="40sp"
+                android:textStyle="bold|italic"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="center"
+
+                android:text="@string/dateoflasthaircut" />
+        </TableRow>
+
+        <TableRow android:id="@+id/row0c" android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:gravity="center_horizontal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+
+
+
+
+            <TextView android:id="@+id/textViewSetDate"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="@string/dayssince" android:textColor="@color/LightBlue"
+                android:textSize="40sp" android:textStyle="bold|italic"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_gravity="bottom"
+                />
+
+        </TableRow>
+
+
+        <TableRow
+            android:id="@+id/row2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/hoursbutton"
+                style="@android:style/ButtonBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/hoursofoperation"
+                android:onClick="hours"
+
+                android:textColor="@color/LightBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/servicesbutton"
+                style="@android:style/ButtonBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/servicesbutton1bw"
+                android:onClick="services"
+
+                android:textColor="@color/LightBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row3"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:padding="20dp">
+
+            <Button
+                android:id="@+id/setapptbutton"
+                style="@android:style/ButtonBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/calendar2"
+                android:onClick="setevent"
+                android:textColor="@color/LightBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/gallerybutton"
+                style="@android:style/ButtonBar"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/galleryicon3"
+                android:onClick="photogallery"
+
+                android:textColor="@color/LightBlue"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/row4"
+
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp">
+
+            <Button android:id="@+id/akbutton" style="@android:style/ButtonBar"
+                android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:gravity="center_horizontal" android:onClick="aboutkelsey2"
+                android:textColor="@color/LightBlue"
+                android:textSize="30sp" android:textStyle="bold"
+                android:background="@drawable/khappointmentbutton" />
+        </TableRow>
+    </LinearLayout>
+
+

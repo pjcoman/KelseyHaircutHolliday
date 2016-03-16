@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5e412e954a24c5310a459c09870e4e2081aceb03">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.android.support-cardview-v7-23.1.1_7a80a676b06a40673f854c8b6e96b1517de42f26.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\libs\internal_impl-23.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a4de9c81ae239414e1ed0f86441b02abaf29bca9">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\internal_impl-23.1.1_fe1e41c069a5f36314a62fae0208e3f277819ec8.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="09c5e804bc67fc0580360043dff067df574a60d4">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-23.1.1_23e5a1a9e5ab9e8eede8f193f8c86bd879df8d85.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.squareup.picasso\picasso\2.5.2\7446d06ec8d4f7ffcc53f1da37c95f200dcb9387\picasso-2.5.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\picasso-2.5.2_a8737f8d60f9ff0abb11d51af70c688701b9a2a4.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-annotations\23.1.1\support-annotations-23.1.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8d680ba5a623724d1fb0e81c36a790f023a6cede">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\support-annotations-23.1.1_e8d09090d6232420c10552cb4f8527c339fd04db.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.backendless\backendless\3.0.8.2\d8b8f135eeb02287297349fa144f615f54d7bb1b\backendless-3.0.8.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d8b8f135eeb02287297349fa144f615f54d7bb1b">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\backendless-3.0.8.2_cd075f15699a1428a99d05ded76958f4d6e888c8.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\uk.co.chrisjenx\calligraphy\2.1.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e653e15e62e8a59ddd76cc7f827bf8bce38ae7bb">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\uk.co.chrisjenx-calligraphy-2.1.0_5a208bd51f7ca6f66f350d6b8b32e21c8472f488.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.4.0_701c9a6d02965fcc31fca70bfb44ca4833bf1677.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5c5699834e9722f1c288fea2de82725d078ba127">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-23.1.1_f8f65f95400c8a1b55603ad8e5d1d0025e3ccd05.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\design\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="379471b2bd17d9737c050345c08e8c7d16589784">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.android.support-design-23.1.1_c6e834073b3af3682c03a332c25ec17d80e5a854.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-tasks\1.4.0\d85884acf6810a3bbbecb587f239005cbc846dc4\bolts-tasks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d85884acf6810a3bbbecb587f239005cbc846dc4">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\bolts-tasks-1.4.0_5ef101fe11adc0206bc269b0f958736a4343fe5c.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.5\686c608d1805b6d4d425ec4459e88164ffc85870\gson-2.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="686c608d1805b6d4d425ec4459e88164ffc85870">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\gson-2.5_7589f417bf005eb9065a7ede80ea1b183f90d786.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\libs\pixlui.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="11de4f81afe82f0b3c7f9b11c7539da003fb50f5">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\pixlui_9c53836a7531ae4148b84602d69260edb0fc87a2.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-applinks\1.4.0\8ad21bf21784dacce5f2043afb97218cc377e835\bolts-applinks-1.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8ad21bf21784dacce5f2043afb97218cc377e835">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\bolts-applinks-1.4.0_986cb2f8c6f560bbb4c212aa257c4459b1f2bccd.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\libs\Parse-1.4.2.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="eff28d7e2ff7c6cf1d312079af5d4152bc5cb48b">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\Parse-1.4.2_c48b628518d9e1d2110ed219c36546bb7889c37e.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.melnykov\floatingactionbutton\1.3.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8c6ebb7d087d1a30bf84356bd2aecf85309fc024">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.melnykov-floatingactionbutton-1.3.0_d6ec0a33c560141f3a6b1da19e66e8dfecf187a1.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-8.4.0_d6d532a03ccd90f5848c76c648b2bbc307c09222.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.4.0_f3b768cc536e65db4e359959790e1b3c2148d825.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\.gradle\caches\modules-2\files-2.1\com.nineoldandroids\library\2.4.0\e9b63380f3a242dbdbf103a2355ad7e43bad17cb\library-2.4.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e9b63380f3a242dbdbf103a2355ad7e43bad17cb">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\library-2.4.0_beea101d8f98a6cc3a77a2b33b9d9ba8d70af786.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="6cbc7773921fcfedbe55657578f0cbfe614778dc">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.1.1_662aec90fa226ad30db91383f186be33e84e3cb7.jar" />
+    </item>
+    <item
+        jar="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\exploded-aar\com.wdullaer\materialdatetimepicker\2.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8a0cab6c96fb94a28534e7d20be3f08f880dee00">
+        <dex dex="C:\Users\me\workspace\KelseyHaircutHolliday\app\build\intermediates\pre-dexed\release\com.wdullaer-materialdatetimepicker-2.2.0_687074101aa9dc4cf8bbb0ad7d8ad7fc31a11eb3.jar" />
+    </item>
+
+</items>
