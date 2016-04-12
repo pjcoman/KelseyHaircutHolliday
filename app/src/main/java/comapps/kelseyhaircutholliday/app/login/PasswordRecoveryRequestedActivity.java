@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import comapps.kelseyhaircutholliday.app.R;
+
 public class PasswordRecoveryRequestedActivity extends Activity
 {
   private Button loginButton;

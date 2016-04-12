@@ -1,8 +1,5 @@
 package comapps.kelseyhaircutholliday.app;
 
-import java.sql.Date;
-import java.util.Calendar;
-
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
@@ -12,8 +9,13 @@ import android.util.Log;
 import android.widget.DatePicker;
 import android.widget.TextView;
 
+import java.sql.Date;
+import java.util.Calendar;
+
 public class DatePickerFragment extends DialogFragment implements
 DatePickerDialog.OnDateSetListener {
+
+	private static final String TAG = "DATEPICKERFRAGMENT";
 
 @Override
 public Dialog onCreateDialog(Bundle savedInstanceSateate) {
@@ -93,9 +95,11 @@ public Dialog onCreateDialog(Bundle savedInstanceSateate) {
 		
 		TextView setHaircutDate = (TextView)getActivity().findViewById(R.id.dateDisplay);
 		setHaircutDate.setText(haircutdate);
-		
-    	
-}
+
+
+
+
+		}
 	
 }	
 	

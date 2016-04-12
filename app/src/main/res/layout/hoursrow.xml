@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:pixlui="http://schemas.android.com/apk/com.neopixl.pixlui"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:clickable="false"
-    android:paddingTop="5dp"
-    android:paddingBottom="5dp"
-    android:id="@+id/hoursrow">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="false"
+              android:paddingTop="5dp"
+              android:paddingBottom="5dp"
+              android:id="@+id/hoursrow"
+              android:orientation="vertical">
 
     <TextView
         android:id="@+id/dayofweekTxt"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
+
         android:clickable="false"
         android:gravity="center"
         android:paddingLeft="40dp"
         android:paddingRight="40dp"
-        android:paddingTop="10dp"
         android:textColor="@color/WhiteSmoke"
         android:textSize="22sp"
 
@@ -27,12 +26,11 @@
 
     <TextView
         android:id="@+id/hoursTxt"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/dayofweekTxt"
-        android:layout_centerHorizontal="true"
+
+
+
         android:gravity="center"
         android:textColor="@color/WhiteSmoke"
         android:textSize="18sp"
@@ -41,4 +39,4 @@
 
          />
 
-</RelativeLayout>
+</LinearLayout>

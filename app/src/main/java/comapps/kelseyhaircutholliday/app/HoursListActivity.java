@@ -55,7 +55,7 @@ public class HoursListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/chalkdust.ttf")
+                .setDefaultFontPath("fonts/Chalkduster.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build());
 

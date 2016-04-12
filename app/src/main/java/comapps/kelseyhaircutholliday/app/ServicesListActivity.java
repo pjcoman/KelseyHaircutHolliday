@@ -4,7 +4,6 @@ import android.app.ListActivity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.Menu;
@@ -55,20 +54,20 @@ public class ServicesListActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
-                .setDefaultFontPath("fonts/chalkdust.ttf")
+                .setDefaultFontPath("fonts/Chalkduster.ttf")
                 .setFontAttrId(R.attr.fontPath)
                 .build());
 
 
         setContentView(R.layout.serviceslist);
 
-        Typeface tf = Typeface.createFromAsset(getAssets(),
-                "fonts/chalkdust.ttf");
+     //   Typeface tf = Typeface.createFromAsset(getAssets(),
+     //           "fonts/Chalkduster.ttf");
 
         int titleId = getResources().getIdentifier("action_bar_title", "id",
                 "android");
         TextView actionbartitle = (TextView) findViewById(titleId);
-        actionbartitle.setTypeface(tf);
+    //    actionbartitle.setTypeface(tf);
         actionbartitle.setTextSize(12);
 
         adapter = new ServicesListViewAdapter(ServicesListActivity.this, R.layout.servicesrow, serviceslist);

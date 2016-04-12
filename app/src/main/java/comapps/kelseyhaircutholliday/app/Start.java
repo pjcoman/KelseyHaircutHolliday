@@ -8,7 +8,7 @@ import android.view.animation.Animation.AnimationListener;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
-import com.parse.Parse;
+
 
 public class Start extends Activity implements AnimationListener {
 

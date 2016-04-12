@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import comapps.kelseyhaircutholliday.app.R;
+
 public class RegistrationSuccessActivity extends Activity
 {
   private TextView messageView;

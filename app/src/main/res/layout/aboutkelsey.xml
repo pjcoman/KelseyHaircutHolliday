@@ -38,7 +38,7 @@
 		        android:paddingLeft="5dp"
 		        android:paddingRight="5dp"
 		        android:paddingTop="20dp"
-		      
+
 		        android:textAppearance="?android:attr/textAppearanceLarge"
 		        android:textColor="@color/LightGrey"
 		        android:textSize="18sp" />

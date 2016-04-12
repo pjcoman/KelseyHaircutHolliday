@@ -8,47 +8,71 @@
               tools:context="comapps.kelseyhaircutholliday.app.MainActivity">
 
     <TableRow
-        android:id="@+id/row0"
+        android:id="@+id/rowloggedin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+
+
+        android:padding="10dp">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
+            android:id="@+id/textViewLoggedIn"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/dayssince2"
-            android:textColor="@color/Ivory"
-            android:textSize="20sp"
+            android:gravity="center_vertical|right"
+            android:text="you are logged in"
+            android:textColor="@color/LightBlue"
+            android:textSize="12sp"
             android:textStyle="bold|italic"
-            />
+            android:visibility="invisible"/>
 
 
     </TableRow>
 
     <TableRow
-        android:id="@+id/row0b"
+        android:id="@+id/row0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
+        android:gravity="center_vertical|center_horizontal"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:padding="0dp">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/dayssince2"
+                android:textColor="@color/Ivory"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                android:paddingRight="5dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/dateDisplay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_vertical|center_horizontal"
+                android:text="@string/dateoflasthaircut"
+                android:textColor="@color/Ivory"
+                android:textSize="16sp"
+                android:textStyle="bold|italic"
+                android:layout_weight="1"/>
+        </LinearLayout>
 
 
-        <TextView
-            android:id="@+id/dateDisplay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center_vertical|center_horizontal"
-            android:text="@string/dateoflasthaircut"
-            android:textColor="@color/Ivory"
-            android:textSize="20sp"
-            android:textStyle="bold|italic"/>
     </TableRow>
 
     <TableRow
@@ -57,7 +81,8 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:paddingBottom="5dp"
-        android:paddingTop="5dp">
+        android:paddingTop="5dp"
+        android:padding="0dp">
 
         <TextView
             android:id="@+id/textViewSetDate"
@@ -67,7 +92,7 @@
             android:gravity="center_vertical|center_horizontal"
             android:text="@string/dayssince"
             android:textColor="@color/LightBlue"
-            android:textSize="20sp"
+            android:textSize="28sp"
             android:textStyle="bold|italic"
             />
 
@@ -76,10 +101,10 @@
     <TableRow
         android:id="@+id/row2"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:padding="20dp">
+        android:padding="5dp">
 
         <Button
             android:id="@+id/hoursbutton"
@@ -112,10 +137,10 @@
     <TableRow
         android:id="@+id/row3"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center_horizontal|center_vertical"
-        android:padding="20dp">
+        android:padding="5dp">
 
         <Button
             android:id="@+id/setapptbutton"
@@ -150,13 +175,10 @@
         android:id="@+id/row4"
 
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center_horizontal"
-        android:paddingBottom="15dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp"
-        android:paddingTop="15dp">
+        android:padding="5dp">
 
         <Button
             android:id="@+id/akbutton"

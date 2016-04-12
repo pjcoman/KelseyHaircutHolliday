@@ -3,32 +3,48 @@ package comapps.kelseyhaircutholliday.app;
 import android.app.Activity;
 import android.app.DialogFragment;
 import android.content.ComponentName;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.backendless.Backendless;
+import com.backendless.BackendlessUser;
+import com.backendless.DeviceRegistration;
 import com.backendless.async.callback.AsyncCallback;
 import com.backendless.exceptions.BackendlessFault;
+import com.backendless.messaging.DeliveryOptions;
+import com.backendless.messaging.MessageStatus;
+import com.backendless.messaging.PublishOptions;
 
 import java.util.Calendar;
+
+import comapps.kelseyhaircutholliday.app.login.LoginActivity;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 
 public class MainActivity extends Activity implements View.OnClickListener,
         View.OnLongClickListener {
 
     private static final String TAG = "MAINACTIVITY";
+    String userId;
+    static String device_id = "";
+
+    private TextView loggedInTextView;
+
+
+
 
     private TextView mDateDisplay;
 
@@ -38,6 +54,11 @@ public class MainActivity extends Activity implements View.OnClickListener,
     public void onCreate(Bundle savedInstanceState) {
              super.onCreate(savedInstanceState);
 
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/Chalkduster.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build());
+
         String appVersion = "v1";
         Backendless.initApp(this, "F443F0E9-D3E9-2FA5-FFBB-AA6A88DE2D00", "9BFA71A7-5EB7-7CD3-FF0D-66505F241C00", appVersion);
 
@@ -45,6 +66,29 @@ public class MainActivity extends Activity implements View.OnClickListener,
             @Override
             public void handleResponse(Void response) {
                 Log.i(TAG, "Device has been registered");
+
+                Backendless.Messaging.getRegistrations(new AsyncCallback<DeviceRegistration>() {
+
+                    @Override
+
+                    public void handleResponse(final DeviceRegistration devReg) {
+
+                        device_id = devReg.getDeviceId();
+
+                        Log.i(TAG, "messaging deviceID is " + device_id);
+
+
+                    }
+
+                    @Override
+
+                    public void handleFault(BackendlessFault arg0) {
+
+                    }
+
+                });
+
+
             }
 
             @Override
@@ -56,32 +100,39 @@ public class MainActivity extends Activity implements View.OnClickListener,
 
 
 
+
+   //     userId = UserIdStorageFactory.instance().getStorage().get();
+
+
+
         setContentView(R.layout.activity_main);
 
+        String android_id = Settings.Secure.getString(this.getContentResolver(), Settings.Secure.ANDROID_ID);
+        Log.i(TAG, "ANDROID_ID is " + android_id);
 
 
-        Typeface tf = Typeface.createFromAsset(getAssets(),
-                "fonts/chalkdust.ttf");
+      //  Typeface tf = Typeface.createFromAsset(getAssets(),
+       //         "fonts/Chalkduster.ttf");
 
         mDateDisplay = (TextView) findViewById(R.id.dateDisplay);
 
         SharedPreferences settings = getSharedPreferences("myFile", 0);
         mDateDisplay.setText(settings.getString("myFile", ""));
 
-        mDateDisplay.setTypeface(tf);
+      //  mDateDisplay.setTypeface(tf);
 
         // set font of action bar title
 
         int titleId = getResources().getIdentifier("action_bar_title", "id",
                 "android");
         TextView actionbartitle = (TextView) findViewById(titleId);
-        actionbartitle.setTypeface(tf);
+      //  actionbartitle.setTypeface(tf);
         actionbartitle.setTextSize(12);
 
-        // top line
+        loggedInTextView = (TextView) findViewById(R.id.textViewLoggedIn);
 
         TextView Dayssinceyourlastvisit = (TextView) findViewById(R.id.textView1);
-        Dayssinceyourlastvisit.setTypeface(tf);
+     //   Dayssinceyourlastvisit.setTypeface(tf);
 
         // date of last visit
 
@@ -94,21 +145,6 @@ public class MainActivity extends Activity implements View.OnClickListener,
         // days since last visit
 
         TextView setdayssince = (TextView) findViewById(R.id.textViewSetDate);
-        setdayssince.setTypeface(tf);
-
-        // set button text font
-
-        Button hoursbutton = (Button) findViewById(R.id.hoursbutton);
-        hoursbutton.setTypeface(tf);
-        Button servicesbutton = (Button) findViewById(R.id.servicesbutton);
-        servicesbutton.setTypeface(tf);
-        Button apptbutton = (Button) findViewById(R.id.setapptbutton);
-        apptbutton.setTypeface(tf);
-        Button gallerybutton = (Button) findViewById(R.id.gallerybutton);
-        gallerybutton.setTypeface(tf);
-        Button akbutton = (Button) findViewById(R.id.akbutton);
-        akbutton.setTypeface(tf);
-
 
         setdayssince.setOnClickListener(new View.OnClickListener() {
 
@@ -170,9 +206,102 @@ public class MainActivity extends Activity implements View.OnClickListener,
             long days = diff / (24 * 60 * 60 * 1000);
 
             String dayssince = Long.toString(days);
+            final Integer int_dayssince = Integer.valueOf(dayssince);
 
-            Log.i(datefromtextview, "this is the haircut date");
-            Log.i(dayssince, "this is days since last haircut");
+
+
+            Log.i(TAG, datefromtextview + " this is the haircut date");
+            Log.i(TAG, dayssince + " this is days since last haircut");
+
+            userId = Backendless.UserService.loggedInUser();
+            Log.i(TAG, "Current user is " + userId);
+
+            if ( userId != "") {
+                loggedInTextView.setVisibility(View.VISIBLE);
+            } else {
+                loggedInTextView.setVisibility(View.INVISIBLE);
+            }
+
+
+        //    userId = settings.getString("userId", "");
+
+        //    Log.i(TAG, "Current user is " + userId);
+
+
+
+            Backendless.Data.of(BackendlessUser.class).findById(userId, new AsyncCallback<BackendlessUser>() {
+
+                public void handleResponse(BackendlessUser response) {
+
+                    if (response != null) {
+
+                        Backendless.UserService.setCurrentUser(response);
+
+
+                        Log.i(TAG, "deviceID is " + device_id);
+
+                        response.setProperty( "days_since_last_visit", int_dayssince );
+                        response.setProperty( "deviceID", device_id);
+
+
+                        Backendless.UserService.update( response, new AsyncCallback<BackendlessUser>()
+                        {
+                            public void handleResponse( BackendlessUser user ) {
+                                Log.i(TAG, user.toString() + "days since and device id has been updated");
+
+                                if ( int_dayssince > 99  ) {
+
+                                    Log.i(TAG, "deviceID inside is " + device_id);
+
+                                    DeliveryOptions deliveryOptions = new DeliveryOptions();
+                                    deliveryOptions.addPushSinglecast(device_id);
+                                    PublishOptions publishOptions = new PublishOptions();
+                                    publishOptions.putHeader("android-ticker-text", "You just got a push notification from Kelsey!");
+                                    publishOptions.putHeader("android-content-title", "It has been 100 days.");
+                                    publishOptions.putHeader("android-content-text", "Let's set up an appointment. :)");
+
+
+                                    Backendless.Messaging.publish( "daysplus100   ", publishOptions, deliveryOptions, new AsyncCallback<MessageStatus>() {
+                                        @Override
+                                        public void handleResponse(MessageStatus messageStatus) {
+                                        }
+                                        @Override
+                                        public void handleFault(BackendlessFault backendlessFault) {
+                                            String error = backendlessFault.getMessage();
+
+                                            Log.i(TAG, "messaging error is " + error);
+                                        }
+                                    } );
+
+                               //     subscribeChannel100Plus(device_id);
+
+
+
+
+
+
+                                }
+                            }
+
+                            public void handleFault( BackendlessFault fault )
+                            {
+                                Log.i(TAG, fault.toString() + "US update failed");
+                            }
+                        });
+
+                    }
+
+                }
+
+                @Override
+
+                public void handleFault(BackendlessFault fault) {
+
+                }
+
+            });
+
+
 
             if (days > -1) {
                 setdayssince.setText(dayssince);
@@ -180,15 +309,24 @@ public class MainActivity extends Activity implements View.OnClickListener,
                         R.color.LightBlue));
             }
             if (days > 60) {
+
                 setdayssince.setText(dayssince);
                 setdayssince.setTextColor(getResources().getColor(
                         R.color.Yellow));
+
+
+
+
             }
             if (days > 100) {
                 setdayssince.setText(dayssince);
                 setdayssince.setTextColor(getResources().getColor(R.color.Red));
-            }
 
+
+
+
+
+            }
         }
 
     }
@@ -210,6 +348,15 @@ public class MainActivity extends Activity implements View.OnClickListener,
     public boolean onOptionsItemSelected(MenuItem item) {
         // Take appropriate action for each action item click
         switch (item.getItemId()) {
+
+            case R.id.action_login:
+                Login();
+                return true;
+
+            case R.id.action_logout:
+                Logout();
+                return true;
+
 
             case R.id.action_call:
                 CallKelsey();
@@ -267,6 +414,41 @@ public class MainActivity extends Activity implements View.OnClickListener,
 
     }
 
+    private void Login() {
+
+        Intent login = new Intent();
+        login.setClass(this, LoginActivity.class);
+        startActivity(login);
+        overridePendingTransition(R.anim.fadeinanimationgallery,R.anim.fadeoutanimationgallery);
+        finish();
+
+    }
+
+    private void Logout() {
+
+        Log.i(TAG, "user logged out1 " + Backendless.UserService.CurrentUser());
+
+        Backendless.UserService.logout( new AsyncCallback<Void>()
+        {
+            public void handleResponse( Void response )
+            {
+
+                Log.i(TAG, "user logged out2 " + Backendless.UserService.CurrentUser());
+                loggedInTextView.setVisibility(View.INVISIBLE);
+                // user has been logged out.
+            }
+
+            public void handleFault( BackendlessFault fault )
+            {
+                // something went wrong and logout failed, to get the error code call fault.getCode()
+            }
+        });
+    }
+
+
+
+
+
     public void hours(View v) {
         Intent hours = new Intent();
         hours.setClass(this, HoursListActivity.class);
@@ -285,7 +467,7 @@ public class MainActivity extends Activity implements View.OnClickListener,
 
     }
 
-    public void appointment(View v) {
+   /* public void appointment(View v) {
         // The following code is the implementation of Email client
         Intent intent3 = new Intent(android.content.Intent.ACTION_SEND);
         intent3.setType("text/plain");
@@ -298,7 +480,9 @@ public class MainActivity extends Activity implements View.OnClickListener,
                 "Could I get an appointment ....");
 
         startActivityForResult((Intent.createChooser(intent3, "Email")), 1);
-    }
+    }*/
+
+
 
     public void setevent(View v) {
         // The following code is the implementation of event/calendar client
@@ -364,5 +548,15 @@ public class MainActivity extends Activity implements View.OnClickListener,
         // TODO Auto-generated method stub
         return false;
     }
+
+    @Override
+    protected void attachBaseContext (Context newBase){
+
+        super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
+
+    }
+
+
+
 
 }

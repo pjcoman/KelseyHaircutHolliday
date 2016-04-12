@@ -41,8 +41,11 @@
     <string name="password_field_prompt">Password:</string>
     <string name="default_registered_text">Registered successfully!</string>
     <string name="registration_success_message">Thank you for registering with the %1$s. Click the button below to proceed to the login.</string>
+	<string name="you_are_logged_in">you are logged in</string>
+	<string name="register">register</string>
+	<string name="login">LOGIN</string>
 
-    <string-array name="booleans">
+	<string-array name="booleans">
         <item></item>
         <item>true</item>
         <item>false</item>

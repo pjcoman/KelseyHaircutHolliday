@@ -3,6 +3,18 @@
       xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
+        android:id="@+id/action_login"
+        android:icon="@drawable/callkelseyicon2"
+        app:showAsAction="ifRoom"
+        android:title="login"/>
+
+    <item
+        android:id="@+id/action_logout"
+        android:icon="@drawable/callkelseyicon2"
+        app:showAsAction="ifRoom"
+        android:title="logout"/>
+
+    <item
         android:id="@+id/action_call"
         android:icon="@drawable/callkelseyicon2"
         app:showAsAction="ifRoom"
